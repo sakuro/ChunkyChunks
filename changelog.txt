@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: TBD
+Date: TBD
+  Features:
+    - Color settings now use native color picker UI
+  Changes:
+    - Removed unimplemented "empty means player color" feature from settings description
+  Info:
+    - IMPORTANT: Color settings will be reset to default values due to setting type change
+    - Please reconfigure your grid colors after updating
+    - This is a limitation of Factorio's settings system when changing setting types
+    - See https://forums.factorio.com/viewtopic.php?t=76036 for technical details
+---------------------------------------------------------------------------------------------------
 Version: 1.5.1
   Bugfixes:
     - No longer crashes when settings are changed on tick 0 (which would happen in map editor in

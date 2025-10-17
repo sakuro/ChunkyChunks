@@ -154,28 +154,6 @@ function fromXY(v)
     return {v.x, v.y}
 end
 
-function parseColour(s)
-    -- local a = {}
-    -- for v in string.gmatch(s, "%S+") do
-    --     table.insert(a, v)
-    -- end
-    local a = s:split(' ')
-    if #a < 3 or #a > 4 then return nil end
-    for i, v in ipairs(a) do
-        v = string.match(v, "%d+%.?%d*")
-        if v == nil then return nil end
-        a[i] = v + 0
-    end
-    local color = {r = a[1], g = a[2], b = a[3]}
-    if #a == 4 then
-        color.a = a[4]
-    else
-        color.a = 1
-    end
-    -- game.print(helpers.table_to_json(a))
-    return color
-end
-
 function add(p, q)
     return {p[1] + q[1], p[2] + q[2]}
 end
@@ -274,7 +252,7 @@ script.on_event(defines.events.on_tick, function(event)
                     local size    = makeLen2(parseDoubles(a[1]))
                     local offset  = makeLen2(parseDoubles(a[2]))
                     local spacing = makeLen2(parseDoubles(a[3]))
-                    local color  = parseColour(a[4]) or {r = 0, g = 0, b = 0, a = 1}
+                    local color  = a[4]
                     color.r = color.r * color.a
                     color.g = color.g * color.a
                     color.b = color.b * color.a

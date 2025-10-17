@@ -33,11 +33,10 @@ data:extend({
     default_value = '0',
     order = '1-c',
   },{
-    type = 'string-setting',
+    type = 'color-setting',
     name = 'chunkychunks-color-1',
     setting_type = 'runtime-per-user',
-    default_value = '0 1 0 0.5',
-    allow_blank = true,
+    default_value = {r = 0, g = 1, b = 0, a = 0.5},
     order = '1-d'
   },{
     type = 'bool-setting',
@@ -73,11 +72,10 @@ data:extend({
     default_value = '0',
     order = '2-c',
   },{
-    type = 'string-setting',
+    type = 'color-setting',
     name = 'chunkychunks-color-2',
     setting_type = 'runtime-per-user',
-    default_value = '0 0 0 0.5',
-    allow_blank = true,
+    default_value = {r = 0, g = 0, b = 0, a = 0.5},
     order = '2-d'
   },{
     type = 'bool-setting',
@@ -113,11 +111,10 @@ data:extend({
     default_value = '0',
     order = '3-c',
   },{
-    type = 'string-setting',
+    type = 'color-setting',
     name = 'chunkychunks-color-3',
     setting_type = 'runtime-per-user',
-    default_value = '1 0 1 0.5',
-    allow_blank = true,
+    default_value = {r = 1, g = 0, b = 1, a = 0.5},
     order = '3-d'
   },{
     type = 'bool-setting',
